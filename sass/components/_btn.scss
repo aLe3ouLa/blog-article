@@ -11,9 +11,7 @@
     text-align: center;
     cursor: pointer;
     outline: none;
-  &:focus {
-    outline: $primary-color-purple-default;
-  }
+
   &:hover {
     background-color: $color-white;
     color: $primary-color-purple-default;
