@@ -1,3 +1,5 @@
+<!-- Implemented by Alexandra Barka for creative fabrica technical assignment -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,8 +22,7 @@
                         <h1 class="primary-heading introduction__details--heading  u-margin-bottom-xsm">Hello, we are
                             Creative Fabrica</h1>
                         <p class="introduction__details--paragraph">Creative Fabrica is created in Amsterdam, one of the
-                            most
-                            inspirational cities in the world.</p>
+                            most inspirational cities in the world.</p>
                         <p class="introduction__details--paragraph">We bring the best possible tools for improving your
                             creativity and productivity.</p>
                     </div>
@@ -136,6 +137,7 @@
                     </div>
 
                     <div id="replies-container" class="replies-container">
+                        
                         <div class="conversation">
                             <div class="reply u-margin-bottom-small">
                                 <div class="reply__details">
@@ -176,7 +178,7 @@
                                             src="./assets/E2ADFD8B-EB2E-4DE9-9319-10887B04FAEC.png" alt="">
                                         <div class="comment__textarea--textarea">
                                             <div class="comment__textarea--textarea--container">
-                                                <textarea id="newComment" name="newComment"
+                                                <textarea id="newCommentInline" name="newCommentInline"
                                                     placeholder="Write a comment..." rows="10"></textarea>
                                             </div>
                                             <button id="btnSendInlineReply" class="btn">Send</button>
@@ -185,7 +187,7 @@
                                 </div>
                             </div>
 
-                            <div class="inline-replies-container"></div>
+                            <div class="inline-replies-container-1"></div>
                         </div>
                         <div class="conversation">
                             <div class="reply u-margin-bottom-small ">
@@ -221,7 +223,7 @@
                                         <span class="text">Like</span>
                                     </div>
                                     <hr class="vertical">
-                                    <div class="reply__actions--reply">
+                                    <div class="reply__actions--reply" onclick="clickReply(this)">
                                         <span class="far fa-comment"></span>
                                         <span class="text">reply</span>
                                     </div>
@@ -273,7 +275,7 @@
                                         <span class="text">Like</span>
                                     </div>
                                     <hr class="vertical">
-                                    <div class="reply__actions--reply">
+                                    <div class="reply__actions--reply" onclick="clickReply(this)">
                                         <span class="far fa-comment"></span>
                                         <span class="text">reply</span>
                                     </div>
@@ -314,16 +316,14 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="reply__content u-margin-bottom-xsm ">Great site! Very generous with
-                                        fonts,
-                                        graphics and designs!</div>
+                                    <div class="reply__content u-margin-bottom-xsm ">Great site! Very generous with fonts, graphics and designs!</div>
                                     <div class="reply__actions">
-                                        <div class="reply__actions--like">
+                                        <div class="reply__actions--like" onclick="clickHeart(this)">
                                             <span class="far fa-heart"></span>
                                             <span class="text">Like</span>
                                         </div>
                                         <hr class="vertical">
-                                        <div class="reply__actions--reply">
+                                        <div class="reply__actions--reply" onclick="clickReply(this)">
                                             <span class="far fa-comment"></span>
                                             <span class="text">reply</span>
                                         </div>
@@ -368,8 +368,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="reply__content u-margin-bottom-xsm ">Great site! Very generous with
-                                        fonts,
+                                    <div class="reply__content u-margin-bottom-xsm ">Great site! Very generous with fonts,
                                         graphics and designs!</div>
                                     <div class="reply__actions">
                                         <div class="reply__actions--like" onclick="clickHeart(this)">
@@ -377,12 +376,12 @@
                                             <span class="text">Like</span>
                                         </div>
                                         <hr class="vertical">
-                                        <div class="reply__actions--reply">
+                                        <div class="reply__actions--reply" onclick="clickReply(this)">
                                             <span class="far fa-comment"></span>
                                             <span class="text">reply</span>
                                         </div>
                                     </div>
-
+    
                                     <div id="inline-reply" class="reply__inline_reply">
                                         <div class="comment__textarea">
                                             <img class="comment__textarea--avatar"
@@ -392,13 +391,13 @@
                                                     <textarea id="newComment" name="newComment"
                                                         placeholder="Write a comment..." rows="10"></textarea>
                                                 </div>
-                                                <button id="btnSendInlineReply" class="btn">Send</button>
+                                                <button id="btnSendInlineReply" class="btn" onclick="sendButtonInline()">Send</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="inline-replies-container"></div>
+    
+                                <div class="inline-replies-container-1"></div>
                             </div>
                             <div class="conversation">
                                 <div class="reply u-margin-bottom-small ">
@@ -420,14 +419,13 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="reply__content u-margin-bottom-xsm ">I have never had any problems when
-                                        I
+                                    <div class="reply__content u-margin-bottom-xsm ">I have never had any problems when I
                                         got
                                         free or purchased anything from them. very generous of giving freebies.</div>
                                     <div class="reply__actions">
                                         <div class="reply__actions--liked">
                                             <span class="fas fa-heart"></span>
-                                            <span class="text">Likes</span>
+                                            <span class="text">23 Likes</span>
                                         </div>
                                         <hr class="vertical">
                                         <div class="reply__actions--like" onclick="clickHeart(this)">
@@ -435,7 +433,7 @@
                                             <span class="text">Like</span>
                                         </div>
                                         <hr class="vertical">
-                                        <div class="reply__actions--reply">
+                                        <div class="reply__actions--reply" onclick="clickReply(this)">
                                             <span class="far fa-comment"></span>
                                             <span class="text">reply</span>
                                         </div>
@@ -454,7 +452,7 @@
                                         </div>
                                     </div>
                                 </div>
-
+    
                                 <div class="inline-replies-container"></div>
                             </div>
                             <div class="conversation">
@@ -477,12 +475,9 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="reply__content u-margin-bottom-xsm ">What is not to recommend about
-                                        Creative
-                                        Fabrica! They are awesome! I have never found another place that is so gracious
-                                        and
-                                        generous! They're very friendly and helpful when we have questions. You will not
-                                        be
+                                    <div class="reply__content u-margin-bottom-xsm ">What is not to recommend about Creative
+                                        Fabrica! They are awesome! I have never found another place that is so gracious and
+                                        generous! They're very friendly and helpful when we have questions. You will not be
                                         disappointed with C F!</div>
                                     <div class="reply__actions">
                                         <div class="reply__actions--like" onclick="clickHeart(this)">
@@ -490,7 +485,7 @@
                                             <span class="text">Like</span>
                                         </div>
                                         <hr class="vertical">
-                                        <div class="reply__actions--reply">
+                                        <div class="reply__actions--reply" onclick="clickReply(this)">
                                             <span class="far fa-comment"></span>
                                             <span class="text">reply</span>
                                         </div>
@@ -508,9 +503,9 @@
                                             </div>
                                         </div>
                                     </div>
-
+    
                                 </div>
-
+    
                                 <div class="inline-replies-container">
                                     <div class="reply u-margin-bottom-small">
                                         <div class="reply__details">
@@ -518,10 +513,8 @@
                                                 <img class="reply__details__wrapper--avatar"
                                                     src="./assets/E2ADFD8B-EB2E-4DE9-9319-10887B04FAEC.png" alt="">
                                                 <div class="reply__details__wrapper_text">
-                                                    <span class="reply__details__wrapper_text--name u-margin-bottom-xxsm">Patrícia
-                                                        Ribeiro</span>
-                                                    <span class="reply__details__wrapper_text--date">February 2, 2019,
-                                                        3:05
+                                                    <span class="reply__details__wrapper_text--name u-margin-bottom-xxsm">Patrícia Ribeiro</span>
+                                                    <span class="reply__details__wrapper_text--date">February 2, 2019, 3:05
                                                         PM</span>
                                                 </div>
                                             </div>
@@ -547,7 +540,7 @@
                                                 <span class="text">reply</span>
                                             </div>
                                         </div>
-
+    
                                         <div id="inline-reply" class="reply__inline_reply">
                                             <div class="comment__textarea">
                                                 <img class="comment__textarea--avatar"
@@ -562,7 +555,7 @@
                                             </div>
                                         </div>
                                     </div>
-
+    
                                 </div>
                             </div>
                         </div>
@@ -572,8 +565,6 @@
                         <div id="show-more" class="show-more" onclick="showHidden()"><span
                                 class="fas fa-angle-double-down"></span>&nbsp;
                             &nbsp;Show all (10 comments)</div>
-
-
                     </div>
 
 
