@@ -159,12 +159,12 @@
                                 <div class="reply__content u-margin-bottom-xsm ">Great site! Very generous with fonts,
                                     graphics and designs!</div>
                                 <div class="reply__actions">
-                                    <div class="reply__actions--like">
+                                    <div class="reply__actions--like" onclick="clickHeart(this)">
                                         <span class="far fa-heart"></span>
                                         <span class="text">Like</span>
                                     </div>
                                     <hr class="vertical">
-                                    <div class="reply__actions--reply">
+                                    <div class="reply__actions--reply" onclick="clickReply(this)">
                                         <span class="far fa-comment"></span>
                                         <span class="text">reply</span>
                                     </div>
@@ -211,7 +211,12 @@
                                     got
                                     free or purchased anything from them. very generous of giving freebies.</div>
                                 <div class="reply__actions">
-                                    <div class="reply__actions--like">
+                                    <div class="reply__actions--liked">
+                                        <span class="fas fa-heart"></span>
+                                        <span class="text">23 Likes</span>
+                                    </div>
+                                    <hr class="vertical">
+                                    <div class="reply__actions--like" onclick="clickHeart(this)">
                                         <span class="far fa-heart"></span>
                                         <span class="text">Like</span>
                                     </div>
@@ -263,7 +268,7 @@
                                     generous! They're very friendly and helpful when we have questions. You will not be
                                     disappointed with C F!</div>
                                 <div class="reply__actions">
-                                    <div class="reply__actions--like">
+                                    <div class="reply__actions--like" onclick="clickHeart(this)">
                                         <span class="far fa-heart"></span>
                                         <span class="text">Like</span>
                                     </div>
@@ -343,15 +348,180 @@
                         </div>
 
                         <div class="hidden-conv" id="hidden-conv">
-                                <div class="conversation">
+                            <div class="conversation">
+                                <div class="reply u-margin-bottom-small">
+                                    <div class="reply__details">
+                                        <div class="reply__details__wrapper">
+                                            <img class="reply__details__wrapper--avatar"
+                                                src="./assets/E2ADFD8B-EB2E-4DE9-9319-10887B04FAEC.png" alt="">
+                                            <div class="reply__details__wrapper_text">
+                                                <span class="reply__details__wrapper_text--name">Patrícia Ribeiro</span>
+                                                <span class="reply__details__wrapper_text--date">February 2, 2019, 3:05
+                                                    PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <span class="fas fa-ellipsis-v"></span>
+                                            <ul class="dropdown-content">
+                                                <li> <span class="fas fa-pen"></span> &nbsp; Edit</li>
+                                                <li><span class="fas fa-trash"></span> &nbsp; Delete</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="reply__content u-margin-bottom-xsm ">Great site! Very generous with
+                                        fonts,
+                                        graphics and designs!</div>
+                                    <div class="reply__actions">
+                                        <div class="reply__actions--like" onclick="clickHeart(this)">
+                                            <span class="far fa-heart"></span>
+                                            <span class="text">Like</span>
+                                        </div>
+                                        <hr class="vertical">
+                                        <div class="reply__actions--reply">
+                                            <span class="far fa-comment"></span>
+                                            <span class="text">reply</span>
+                                        </div>
+                                    </div>
+
+                                    <div id="inline-reply" class="reply__inline_reply">
+                                        <div class="comment__textarea">
+                                            <img class="comment__textarea--avatar"
+                                                src="./assets/E2ADFD8B-EB2E-4DE9-9319-10887B04FAEC.png" alt="">
+                                            <div class="comment__textarea--textarea">
+                                                <div class="comment__textarea--textarea--container">
+                                                    <textarea id="newComment" name="newComment"
+                                                        placeholder="Write a comment..." rows="10"></textarea>
+                                                </div>
+                                                <button id="btnSendInlineReply" class="btn">Send</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="inline-replies-container"></div>
+                            </div>
+                            <div class="conversation">
+                                <div class="reply u-margin-bottom-small ">
+                                    <div class="reply__details">
+                                        <div class="reply__details__wrapper">
+                                            <img class="reply__details__wrapper--avatar"
+                                                src="./assets/98EFE986-F8C3-4851-9F1E-C80406C0C874.png" alt="">
+                                            <div class="reply__details__wrapper_text">
+                                                <span class="reply__details__wrapper_text--name">Zoe Miller</span>
+                                                <span class="reply__details__wrapper_text--date">January 31, 2019, 2:12
+                                                    PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <span class="fas fa-ellipsis-v"></span>
+                                            <ul class="dropdown-content">
+                                                <li> <span class="fas fa-pen"></span> &nbsp; Edit</li>
+                                                <li><span class="fas fa-trash"></span> &nbsp; Delete</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="reply__content u-margin-bottom-xsm ">I have never had any problems when
+                                        I
+                                        got
+                                        free or purchased anything from them. very generous of giving freebies.</div>
+                                    <div class="reply__actions">
+                                        <div class="reply__actions--liked">
+                                            <span class="fas fa-heart"></span>
+                                            <span class="text">Likes</span>
+                                        </div>
+                                        <hr class="vertical">
+                                        <div class="reply__actions--like" onclick="clickHeart(this)">
+                                            <span class="far fa-heart"></span>
+                                            <span class="text">Like</span>
+                                        </div>
+                                        <hr class="vertical">
+                                        <div class="reply__actions--reply">
+                                            <span class="far fa-comment"></span>
+                                            <span class="text">reply</span>
+                                        </div>
+                                    </div>
+                                    <div id="inline-reply" class="reply__inline_reply">
+                                        <div class="comment__textarea">
+                                            <img class="comment__textarea--avatar"
+                                                src="./assets/E2ADFD8B-EB2E-4DE9-9319-10887B04FAEC.png" alt="">
+                                            <div class="comment__textarea--textarea">
+                                                <div class="comment__textarea--textarea--container">
+                                                    <textarea id="newComment" name="newComment"
+                                                        placeholder="Write a comment..." rows="10"></textarea>
+                                                </div>
+                                                <button id="btnSendInlineReply" class="btn">Send</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="inline-replies-container"></div>
+                            </div>
+                            <div class="conversation">
+                                <div class="reply u-margin-bottom-small ">
+                                    <div class="reply__details">
+                                        <div class="reply__details__wrapper">
+                                            <img class="reply__details__wrapper--avatar"
+                                                src="./assets/5507EA13-DCD3-4DFC-99A0-F6291D3E2E0C.png" alt="">
+                                            <div class="reply__details__wrapper_text">
+                                                <span class="reply__details__wrapper_text--name">Rickie Baroch</span>
+                                                <span class="reply__details__wrapper_text--date">February 2, 2019, 3:05
+                                                    PM</span>
+                                            </div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <span class="fas fa-ellipsis-v"></span>
+                                            <ul class="dropdown-content">
+                                                <li> <span class="fas fa-pen"></span> &nbsp; Edit</li>
+                                                <li><span class="fas fa-trash"></span> &nbsp; Delete</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="reply__content u-margin-bottom-xsm ">What is not to recommend about
+                                        Creative
+                                        Fabrica! They are awesome! I have never found another place that is so gracious
+                                        and
+                                        generous! They're very friendly and helpful when we have questions. You will not
+                                        be
+                                        disappointed with C F!</div>
+                                    <div class="reply__actions">
+                                        <div class="reply__actions--like" onclick="clickHeart(this)">
+                                            <span class="far fa-heart"></span>
+                                            <span class="text">Like</span>
+                                        </div>
+                                        <hr class="vertical">
+                                        <div class="reply__actions--reply">
+                                            <span class="far fa-comment"></span>
+                                            <span class="text">reply</span>
+                                        </div>
+                                    </div>
+                                    <div id="inline-reply" class="reply__inline_reply">
+                                        <div class="comment__textarea">
+                                            <img class="comment__textarea--avatar"
+                                                src="./assets/E2ADFD8B-EB2E-4DE9-9319-10887B04FAEC.png" alt="">
+                                            <div class="comment__textarea--textarea">
+                                                <div class="comment__textarea--textarea--container">
+                                                    <textarea id="newCommentInline" name="newComment"
+                                                        placeholder="Write a comment..." rows="10"></textarea>
+                                                </div>
+                                                <button id="btnSendInlineReply" class="btn">Send</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="inline-replies-container">
                                     <div class="reply u-margin-bottom-small">
                                         <div class="reply__details">
                                             <div class="reply__details__wrapper">
                                                 <img class="reply__details__wrapper--avatar"
                                                     src="./assets/E2ADFD8B-EB2E-4DE9-9319-10887B04FAEC.png" alt="">
                                                 <div class="reply__details__wrapper_text">
-                                                    <span class="reply__details__wrapper_text--name">Patrícia Ribeiro</span>
-                                                    <span class="reply__details__wrapper_text--date">February 2, 2019, 3:05
+                                                    <span class="reply__details__wrapper_text--name">Patrícia
+                                                        Ribeiro</span>
+                                                    <span class="reply__details__wrapper_text--date">February 2, 2019,
+                                                        3:05
                                                         PM</span>
                                                 </div>
                                             </div>
@@ -377,7 +547,7 @@
                                                 <span class="text">reply</span>
                                             </div>
                                         </div>
-    
+
                                         <div id="inline-reply" class="reply__inline_reply">
                                             <div class="comment__textarea">
                                                 <img class="comment__textarea--avatar"
@@ -387,182 +557,23 @@
                                                         <textarea id="newComment" name="newComment"
                                                             placeholder="Write a comment..." rows="10"></textarea>
                                                     </div>
-                                                    <button id="btnSendInlineReply" class="btn">Send</button>
+                                                    <button id="btnSend" class="btn">Send</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-    
-                                    <div class="inline-replies-container"></div>
-                                </div>
-                                <div class="conversation">
-                                    <div class="reply u-margin-bottom-small ">
-                                        <div class="reply__details">
-                                            <div class="reply__details__wrapper">
-                                                <img class="reply__details__wrapper--avatar"
-                                                    src="./assets/98EFE986-F8C3-4851-9F1E-C80406C0C874.png" alt="">
-                                                <div class="reply__details__wrapper_text">
-                                                    <span class="reply__details__wrapper_text--name">Zoe Miller</span>
-                                                    <span class="reply__details__wrapper_text--date">January 31, 2019, 2:12
-                                                        PM</span>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown">
-                                                <span class="fas fa-ellipsis-v"></span>
-                                                <ul class="dropdown-content">
-                                                    <li> <span class="fas fa-pen"></span> &nbsp; Edit</li>
-                                                    <li><span class="fas fa-trash"></span> &nbsp; Delete</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="reply__content u-margin-bottom-xsm ">I have never had any problems when
-                                            I
-                                            got
-                                            free or purchased anything from them. very generous of giving freebies.</div>
-                                        <div class="reply__actions">
-                                            <div class="reply__actions--like">
-                                                <span class="far fa-heart"></span>
-                                                <span class="text">Like</span>
-                                            </div>
-                                            <hr class="vertical">
-                                            <div class="reply__actions--reply">
-                                                <span class="far fa-comment"></span>
-                                                <span class="text">reply</span>
-                                            </div>
-                                        </div>
-                                        <div id="inline-reply" class="reply__inline_reply">
-                                            <div class="comment__textarea">
-                                                <img class="comment__textarea--avatar"
-                                                    src="./assets/E2ADFD8B-EB2E-4DE9-9319-10887B04FAEC.png" alt="">
-                                                <div class="comment__textarea--textarea">
-                                                    <div class="comment__textarea--textarea--container">
-                                                        <textarea id="newComment" name="newComment"
-                                                            placeholder="Write a comment..." rows="10"></textarea>
-                                                    </div>
-                                                    <button id="btnSendInlineReply" class="btn">Send</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                    <div class="inline-replies-container"></div>
-                                </div>
-                                <div class="conversation">
-                                    <div class="reply u-margin-bottom-small ">
-                                        <div class="reply__details">
-                                            <div class="reply__details__wrapper">
-                                                <img class="reply__details__wrapper--avatar"
-                                                    src="./assets/5507EA13-DCD3-4DFC-99A0-F6291D3E2E0C.png" alt="">
-                                                <div class="reply__details__wrapper_text">
-                                                    <span class="reply__details__wrapper_text--name">Rickie Baroch</span>
-                                                    <span class="reply__details__wrapper_text--date">February 2, 2019, 3:05
-                                                        PM</span>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown">
-                                                <span class="fas fa-ellipsis-v"></span>
-                                                <ul class="dropdown-content">
-                                                    <li> <span class="fas fa-pen"></span> &nbsp; Edit</li>
-                                                    <li><span class="fas fa-trash"></span> &nbsp; Delete</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="reply__content u-margin-bottom-xsm ">What is not to recommend about
-                                            Creative
-                                            Fabrica! They are awesome! I have never found another place that is so gracious
-                                            and
-                                            generous! They're very friendly and helpful when we have questions. You will not
-                                            be
-                                            disappointed with C F!</div>
-                                        <div class="reply__actions">
-                                            <div class="reply__actions--like">
-                                                <span class="far fa-heart"></span>
-                                                <span class="text">Like</span>
-                                            </div>
-                                            <hr class="vertical">
-                                            <div class="reply__actions--reply">
-                                                <span class="far fa-comment"></span>
-                                                <span class="text">reply</span>
-                                            </div>
-                                        </div>
-                                        <div id="inline-reply" class="reply__inline_reply">
-                                            <div class="comment__textarea">
-                                                <img class="comment__textarea--avatar"
-                                                    src="./assets/E2ADFD8B-EB2E-4DE9-9319-10887B04FAEC.png" alt="">
-                                                <div class="comment__textarea--textarea">
-                                                    <div class="comment__textarea--textarea--container">
-                                                        <textarea id="newCommentInline" name="newComment"
-                                                            placeholder="Write a comment..." rows="10"></textarea>
-                                                    </div>
-                                                    <button id="btnSendInlineReply" class="btn">Send</button>
-                                                </div>
-                                            </div>
-                                        </div>
-    
-                                    </div>
-    
-                                    <div class="inline-replies-container">
-                                        <div class="reply u-margin-bottom-small">
-                                            <div class="reply__details">
-                                                <div class="reply__details__wrapper">
-                                                    <img class="reply__details__wrapper--avatar"
-                                                        src="./assets/E2ADFD8B-EB2E-4DE9-9319-10887B04FAEC.png" alt="">
-                                                    <div class="reply__details__wrapper_text">
-                                                        <span class="reply__details__wrapper_text--name">Patrícia
-                                                            Ribeiro</span>
-                                                        <span class="reply__details__wrapper_text--date">February 2, 2019,
-                                                            3:05
-                                                            PM</span>
-                                                    </div>
-                                                </div>
-                                                <div class="dropdown">
-                                                    <span class="fas fa-ellipsis-v"></span>
-                                                    <ul class="dropdown-content">
-                                                        <li> <span class="fas fa-pen"></span> &nbsp; Edit</li>
-                                                        <li><span class="fas fa-trash"></span> &nbsp; Delete</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="reply__content u-margin-bottom-xsm ">Great site! Very generous with
-                                                fonts,
-                                                graphics and designs!</div>
-                                            <div class="reply__actions">
-                                                <div class="reply__actions--like">
-                                                    <span class="far fa-heart"></span>
-                                                    <span class="text">Like</span>
-                                                </div>
-                                                <hr class="vertical">
-                                                <div class="reply__actions--reply">
-                                                    <span class="far fa-comment"></span>
-                                                    <span class="text">reply</span>
-                                                </div>
-                                            </div>
-    
-                                            <div id="inline-reply" class="reply__inline_reply">
-                                                <div class="comment__textarea">
-                                                    <img class="comment__textarea--avatar"
-                                                        src="./assets/E2ADFD8B-EB2E-4DE9-9319-10887B04FAEC.png" alt="">
-                                                    <div class="comment__textarea--textarea">
-                                                        <div class="comment__textarea--textarea--container">
-                                                            <textarea id="newComment" name="newComment"
-                                                                placeholder="Write a comment..." rows="10"></textarea>
-                                                        </div>
-                                                        <button id="btnSend" class="btn">Send</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-    
-                                    </div>
+
                                 </div>
                             </div>
-                        
-                            <hr>
+                        </div>
 
-                        <div id="show-more" class="show-more" onclick="showHidden()"><span class="fas fa-angle-double-down"></span>&nbsp;
+                        <hr>
+
+                        <div id="show-more" class="show-more" onclick="showHidden()"><span
+                                class="fas fa-angle-double-down"></span>&nbsp;
                             &nbsp;Show all (10 comments)</div>
 
-                        
+
                     </div>
 
 

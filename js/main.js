@@ -66,57 +66,29 @@ button.addEventListener('click', function (event) {
 }, false);
 
 
-function hearts() {
-    let heart = document.querySelectorAll('span.fa-heart');
 
-    for (let i = 0; i < heart.length; i++) {
-        let self = heart[i];
-
-        self.addEventListener('click', function (event) {
-            // prevent browser's default action
-            event.preventDefault();
-
-            if (self.classList.contains('far')) {
-                self.classList.remove('far')
-                self.classList.add('fas');
-                self.nextElementSibling.innerHTML = 'liked';
-            } else {
-                self.classList.remove('fas')
-                self.classList.add('far');
-                self.nextElementSibling.innerHTML = 'like';
-            }
-
-        }, false);
-    }
-}
-
-function replies() {
-    let reply = document.querySelectorAll('span.fa-comment');
-
-    for (let i = 0; i < reply.length; i++) {
-        let self = reply[i];
-
-        self.addEventListener('click', function (event) {
-            // prevent browser's default action
-            event.preventDefault();
-
-            let replyitem = self.parentElement.parentElement.nextElementSibling;
-
-            if (replyitem.classList.contains('editor-display')) {
-                replyitem.classList.remove('editor-display');
-            } else {
-                replyitem.classList.add('editor-display');
-            }
-
-        }, false);
-    }
-}
-
-replies();
-hearts();
-
-
-function showHidden (){
+function showHidden() {
     let hidden = document.getElementById("hidden-conv");
     hidden.classList.add("show-hidden-conv");
+}
+
+function clickHeart(e) {
+    if (e.children[0].classList.contains('far')) {
+        e.children[0].classList.remove('far')
+        e.children[0].classList.add('fas');
+        e.children[1].innerHTML = 'liked';
+    } else {
+        e.children[0].classList.remove('fas')
+        e.children[0].classList.add('far');
+        e.children[1].innerHTML = 'like';
+    }
+}
+
+function clickReply(e) {
+    let replyitem = e.parentElement.nextElementSibling;
+    if (replyitem.classList.contains('editor-display')) {
+        replyitem.classList.remove('editor-display');
+    } else {
+        replyitem.classList.add('editor-display');
+    }
 }
