@@ -1,0 +1,20 @@
+.step-by-step {
+    padding-left: 1.1rem;
+
+    li {
+        font-weight: 700;   
+        font-size: $default-font-size;
+        line-height: 2.4rem;
+        
+    }
+
+    li > * {
+        font-weight:normal;
+    }
+
+    &--img {
+        margin: 2rem 0 4rem 0;
+        max-width: 100%;
+        height: auto;
+    }
+}

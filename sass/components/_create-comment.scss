@@ -1,0 +1,48 @@
+.comment__textarea {
+    display: flex;
+
+    &--avatar {
+        border-radius: 50%;
+        width: 4rem;
+        height: 4rem;
+        margin-right: 1rem;
+    }
+
+    &--textarea {
+        width: 100%;
+        padding-right: 8px;
+        &--container {
+            textarea {
+                border: 1px solid #E3E1E9;
+                width: 100%;
+                margin: 5px 0;
+                padding: 1rem 2rem;
+            }
+
+        }
+    }
+
+}
+
+::-webkit-input-placeholder {
+    /* Edge */
+    color: $primary-color-purple-light;
+    font-size: $small-font-size;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $primary-color-purple-light;
+    font-size: $small-font-size;
+}
+
+::placeholder {
+    color: $primary-color-purple-light;
+    font-size: $small-font-size;
+}
+
+
+
+
+
+

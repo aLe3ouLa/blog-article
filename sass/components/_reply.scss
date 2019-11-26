@@ -1,0 +1,114 @@
+.reply {
+    background-color: $color-white;
+    border: 1px solid $color-neutral-dark;
+    border-radius: 4px;
+    width: 100%;
+    padding: 2rem;
+
+    &__inline_reply {
+        display: none;
+        margin-top: 2rem;
+        padding: 1rem 0 0 5rem;
+    }
+
+
+    &__content {
+        color: $primary-color-purple-dark;
+        font-size: $small-font-size;
+        font-weight: $font-weight-normal;
+        padding: 1rem 0 0 5rem;
+        max-width: 79rem;
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 1rem 0 0 5rem;
+        hr.vertical {
+            border: none;
+            border-left: 1px solid $color-neutral-dark;
+            height: 1rem;
+            width: .2rem;
+            margin: 0;
+            padding: 0;
+            margin-right: 2rem;
+        }
+
+        &--like .text,
+        &--reply .text {
+            text-transform: uppercase;
+            font-size: $xsmall-font-size;
+            color: $primary-color-purple-dark;
+            font-weight: $font-weight-bold;
+            letter-spacing: .1rem;
+            line-height: 1.4rem;
+        }
+
+        &--like {
+            margin-right: 2rem;
+        }
+
+        &--like,
+        &--reply {
+            .far, .fas {
+                font-size: 1.4rem;
+                cursor: pointer;
+            }
+
+            .fas{
+                color: $primary-color-purple-light;
+            }
+        }
+    }
+
+    &__details {
+        display: flex;
+        justify-content: space-between;
+
+        &__wrapper {
+            display: flex;
+            align-items: center;
+
+            &--avatar {
+                border-radius: 50%;
+                width: 4rem;
+                height: 4rem;
+                margin-right: 1rem;
+            }
+
+            &_text {
+                display: flex;
+                flex-direction: column;
+
+                &--name {
+                    color: $primary-color-purple-dark;
+                    font-size: $xsmall-font-size;
+                    font-weight: $font-weight-bold;
+                    line-height: 1.4rem;
+                }
+
+                &--date {
+                    color: $primary-color-purple-light;
+                    font-size: $xsmall-font-size;
+                    font-weight: $font-weight-normal;
+                    line-height: 1.4rem;
+                }
+            }
+
+            .fab {
+                font-family: 'FontAwesome';
+                color: $primary-color-purple-light;
+            }
+        }
+
+    }
+}
+
+.editor-display {
+    display: block
+}
+
+.inline-replies-container {
+    padding: 0 0 0 5rem;
+}

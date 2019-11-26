@@ -1,0 +1,23 @@
+.btn {
+    border-radius: 4px;
+    padding: 1rem 4.3rem;
+    background-color: $primary-color-purple-default;
+    color: $color-white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 0.88px;
+    line-height: 17px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+  &:focus {
+    outline: $primary-color-purple-default;
+  }
+  &:hover {
+    background-color: $color-white;
+    color: $primary-color-purple-default;
+    border: 1px solid $primary-color-purple-default;
+    box-shadow: 0 2px 6px rgba($color-black, .2);
+  }
+}

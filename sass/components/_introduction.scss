@@ -1,0 +1,60 @@
+.introduction {
+    background-color: $secondary-color;
+    border-radius: $default-border-radius;
+    height: 19.2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 6rem;
+
+    @include respond-width($w-s) {
+        padding: 2rem;
+        height: 27.2rem;
+    }
+
+    @include respond-width($w-m) {
+        height: 21.2rem;
+    }
+
+
+    &__details {
+        width: 48rem;
+        margin-right: 10%;
+        padding: 1rem 0;
+
+        @include respond-width($w-s) {
+            padding: 0;
+            width: 40rem;
+        }
+
+        @include respond-width($w-xs) {
+            width: 100%;
+        }
+
+        &--heading {
+            @include respond-width($w-m) {
+                width: 30rem;
+            }
+        }
+        &--paragraph {
+            font-size: $small-font-size;
+            font-weight: $font-weight-normal;
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+            
+        }
+
+
+    }
+
+    &__image {
+        img {
+            max-height: 16.9rem;
+        }
+
+        @include respond-width($w-xs) {
+            display: none;
+        }
+    }
+}
+

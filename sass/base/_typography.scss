@@ -1,0 +1,50 @@
+body {
+    font-family: 'Poppins', Helvetica, sans-serif;font-weight: 400;
+    color: $primary-color-purple-dark;
+    padding: 5rem;
+    line-height: 1.7rem;
+    box-sizing: border-box;
+    background-color: $color-neutral;
+
+    @include respond-width($w-s) {
+        padding: 2.7rem 2rem;
+    }
+}
+
+.primary-heading {
+    font-size: $large-font-size;
+    font-weight: $font-weight-bold;
+    line-height: 3.4rem;
+}
+
+.content-paragraph {
+    font-size: $default-font-size;
+    font-weight: $font-weight-normal;
+    line-height: 2.4rem;
+}
+
+.tertiary-heading {
+    font-size: 2rem;
+    font-weight: $font-weight-bold;
+    line-height: 2.4rem;
+}
+
+.fab {
+    color: $color-blue-link;
+    font-family: 'FontAwesome';
+    font-size: $default-font-size;
+    font-weight: $font-weight-normal;
+    line-height: 2.4rem;
+    margin-right: 1rem;
+}
+
+.show-more {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.05);
+    }
+}

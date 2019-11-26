@@ -1,0 +1,27 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+a {
+    color: $color-blue-link;
+    &:hover {
+        color: $primary-color-purple-default;
+    }
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border: 1px solid #E3E1E9;
+    margin: 1rem 0 2rem 0;
+    padding: 0;
+}

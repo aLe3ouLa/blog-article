@@ -1,0 +1,15 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+//MEDIA QUERY manager
+
+@mixin respond-width($media) {
+    @media (max-width: $media - 1px){
+       @content;
+   }
+}

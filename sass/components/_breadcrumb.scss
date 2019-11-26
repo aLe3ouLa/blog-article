@@ -1,0 +1,21 @@
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    font-size: $small-font-size;
+    font-weight: $font-weight-normal;
+    text-align: left;
+
+    &__item {
+        &:not(a) {
+            text-decoration: none;
+        }
+
+        &+.breadcrumb__item::before {
+            display: inline-block;
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+            content: "/";
+        }
+    }
+}
