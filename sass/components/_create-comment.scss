@@ -1,12 +1,37 @@
 .comment__textarea {
     display: flex;
 
-    &--avatar {
-        border-radius: 50%;
-        width: 4rem;
-        height: 4rem;
-        margin-right: 1rem;
+    @include respond-width($w-xs) {
+        flex-wrap: wrap;
     }
+
+    &__user {
+        display: flex;
+        align-items: flex-start;
+        @include respond-width($w-xs) {
+            align-items: center;
+        }
+        
+        &--avatar {
+            border-radius: 50%;
+            width: 4rem;
+            height: 4rem;
+            margin-right: 1rem;
+        }
+    
+        &--name {
+            display: none;
+            @include respond-width($w-xs) {
+                display: inline-block;
+                font-weight: 1.2rem;
+                font-weight: 700;
+                line-height: 1.4rem;
+            }
+        }
+
+    }
+
+    
 
     &--textarea {
         width: 100%;

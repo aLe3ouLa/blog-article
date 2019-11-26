@@ -4,7 +4,7 @@
     padding: 6rem;
     margin-bottom: 6rem;
 
-    @include respond-width($w-s) {
+    @include respond-width($w-xs) {
         padding: 4rem 2rem;
     }
 }
