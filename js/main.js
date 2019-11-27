@@ -36,8 +36,11 @@ function sendButton() {
 
             <div id="inline-reply" class="reply__inline_reply">
                 <div class="comment__textarea">
-                    <img class="comment__textarea--avatar"
-                        src="./assets/E2ADFD8B-EB2E-4DE9-9319-10887B04FAEC.png" alt="">
+                <div class="comment__textarea__user">
+                <img class="comment__textarea__user--avatar"
+                    src="./assets/E2ADFD8B-EB2E-4DE9-9319-10887B04FAEC.png" alt="">
+                <span class="comment__textarea__user--name">Patrícia Ribeiro</span>
+            </div>
                     <div class="comment__textarea--textarea">
                         <div class="comment__textarea--textarea--container">
                             <textarea id="newComment" name="newComment"
