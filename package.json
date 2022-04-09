@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "node-sass": "^4.13.0"
   }
 }
